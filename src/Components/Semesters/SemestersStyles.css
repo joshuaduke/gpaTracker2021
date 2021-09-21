@@ -12,6 +12,10 @@ p, a, h3 ,hr {
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     
 }

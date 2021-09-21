@@ -52,14 +52,12 @@ text-align:center;
 
 `
 
-const AddSemester = styled.a`
-background-color:blue;
-color:black;
-font-size:20px;
-padding:3px 10px 4px 10px;
+const AddSemester = styled.button`
+padding:5px 12px;
 border-radius:25px;
-display:inline-block;
-margin-top:10px;
+font-size:25px;
+border:none;
+cursor:pointer;
 `
 
 
@@ -70,36 +68,17 @@ function Semesters(){
             <Navigation >
                 {/* Grid for top bar */}
                 <Close>
-                    <p><a href="/">X</a></p>
+                    <p><a href="/semestersEdit"> &lt; </a></p>
                 </Close>
 
                 <SemestersTitle>
-                    <p>Semesters</p>
+                    <p>New Semester</p>
                 </SemestersTitle>
 
                 <Edit>
-                    <p><a href="/">Done</a></p>
+                    <p><a href="/">Save</a></p>
                 </Edit>
             </Navigation>
-
-            <Instructions>
-                <h3>Tap a semester to make it the current semester</h3>
-            </Instructions>
-
-            <hr />
-
-            {/* This is the individual semesters */}
-            <MySemesters>
-                <EditSemester name="Fall 2019"/>
-                <EditSemester name="Winter 2020"/>
-                <EditSemester name="Summer 2020"/>
-            </MySemesters>
-
-            <Footer>
-                <p>NEW SEMESTER</p>
-                <AddSemester href="/semestersAdd">+</AddSemester>
-            </Footer>
-
         </Container>
     )
 }

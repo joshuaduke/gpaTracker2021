@@ -56,7 +56,7 @@ function Semesters(){
                 </SemestersTitle>
 
                 <Edit>
-                    <p><a href="./Edit/EditSemesters.js">Edit</a></p>
+                    <p><a href="/semestersEdit">Edit</a></p>
                 </Edit>
             </Navigation>
 
