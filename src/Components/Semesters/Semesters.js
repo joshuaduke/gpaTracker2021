@@ -48,7 +48,7 @@ function Semesters(){
             <Navigation >
                 {/* Grid for top bar */}
                 <Close>
-                    <p><a href="#">X</a></p>
+                    <p><a href="/classes">X</a></p>
                 </Close>
 
                 <SemestersTitle>

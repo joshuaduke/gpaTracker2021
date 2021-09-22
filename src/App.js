@@ -3,6 +3,8 @@ import Semesters from "./Components/Semesters/Semesters";
 import EditSemesters from "./Components/Semesters/Edit/EditSemesters"
 import AddSemester from './Components/Semesters/AddNew/AddSemester'
 
+import Classes from "./Components/Classes/Classes";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +16,10 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/classes">
+          <Classes />
+        </Route>
+
         <Route path="/semestersEdit">
           <EditSemesters />
         </Route>
