@@ -4,6 +4,7 @@ import EditSemesters from "./Components/Semesters/Edit/EditSemesters"
 import AddSemester from './Components/Semesters/AddNew/AddSemester'
 
 import Classes from "./Components/Classes/Classes";
+import EditClasses from "./Components/Classes/Edit/EditClasses"
 
 import {
   BrowserRouter as Router,
@@ -16,8 +17,12 @@ function App() {
   return (
     <Router>
       <Switch>
+
         <Route path="/classes">
           <Classes />
+        </Route>
+        <Route path="/classesEdit">
+          <EditClasses />
         </Route>
 
         <Route path="/semestersEdit">

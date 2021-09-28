@@ -1,12 +1,13 @@
 import React from "react"
 import ReactDom from 'react-dom'
-import  "../Semesters/SemestersStyles.css"
+import  "../../Semesters/SemestersStyles.css"
 import styled from "styled-components";
 import { FaCog } from "react-icons/fa";
 import { FaCalculator } from "react-icons/fa";
 import { FaSchool } from "react-icons/fa";
+import { FaPlusCircle } from "react-icons/fa";
 
-import Class from './Class'
+import EditClass from './EditClass'
 
 const Container = styled.section`
 display: flex;
@@ -66,7 +67,7 @@ p{
 `
 
 const Courses = styled.section`
-flex: 1 1 auto;
+// flex: 1 1 auto;
 ${CoursesGrid}:nth-child(even){
     background-color:yellow;
 }
@@ -96,9 +97,17 @@ div{
 }
 `
 
-const ModifiedClass = styled(Class)`
-    background-color:blue;
-    color:red;
+const NewCourse = styled.section`
+    width:100%;
+    text-align:center;
+    color:green;
+
+a{
+    color:green;
+    display:block;
+    margin-top:5px;
+    font-size:1.5em;
+}
 `
 
 function Classes(){
@@ -109,11 +118,11 @@ function Classes(){
                 <Navigation >
                     {/* Grid for top bar */}
                     <Close>
-                        <p><a href="/">Fall 2019</a></p>
+                        <p><a href="/">X</a></p>
                     </Close>
 
                     <Edit>
-                        <p><a href="/classesEdit">Edit</a></p>
+                        <p><a href="/classes">Done</a></p>
                     </Edit>
                 </Navigation>
                 <Grades>
@@ -163,10 +172,20 @@ function Classes(){
                         </div>
                     </CoursesGrid>
 
-                    <ModifiedClass />
+                    <EditClass/>
                     
                 </Courses>
+
+                <NewCourse>
+                    <p>NEW COURSE</p>
+                    
+                    <a href="/courseAdd">
+                        <FaPlusCircle/>
+                    </a>
+                </NewCourse>
             </Container>
+
+
             
             <Footer>
                 <div>

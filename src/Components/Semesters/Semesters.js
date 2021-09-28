@@ -3,6 +3,7 @@ import ReactDom from 'react-dom'
 import Semester from "./Semester"
 import  "./SemestersStyles.css"
 import styled from "styled-components";
+import { FaPlusCircle } from "react-icons/fa";
 
 const Container = styled.section`
 
@@ -41,6 +42,24 @@ background-color: green;
 text-align:right;
 `
 
+const Footer = styled.footer`
+position:absolute;
+bottom:0;
+width:100%;
+background-color:red;
+height:18vh;
+padding:20px 10px;
+text-align:center;
+color:green;
+
+a{
+    color:green;
+    display:block;
+    margin-top:5px;
+    font-size:1.5em;
+}
+`
+
 function Semesters(){
 
     return(
@@ -72,6 +91,15 @@ function Semesters(){
                 <Semester name="Winter 2020"/>
                 <Semester name="Summer 2020"/>
             </MySemesters>
+
+            <Footer>
+                <p>NEW SEMESTER</p>
+                
+                <a href="/semestersAdd">
+                    <FaPlusCircle/>
+                </a>
+                
+            </Footer>
 
         </Container>
     )
